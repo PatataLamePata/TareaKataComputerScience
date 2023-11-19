@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Alumnos</title>
+    <link rel="shortcut icon" href="assets/IMGS/librito.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+
+<body> 
+
+    <header>
+        <div id="titulo">Gestión Alumnos</div>
+        <div id="nav">
+            <button id="seccionFormulario" type="button">Ingresar Datos</button>
+            <button id="seccionDatos" type="button">Ver Alumnos</button>
+        </div>
+    </header>
+    <div id="grid">
+        <main>
+            <div class="contenedorPrincipal">
+                <div id="formulario">
+                    <h2>Ingresa los datos</h2>
+                    <form id="miFormulario">
+                        <div class="valores">
+                            <label for="rut" class="etiqueta">RUT:</label>
+                            <input type="text" class="valor" id="rut" required>
+                        </div>
+                        <div class="valores">
+                            <label for="nombre" class="etiqueta">Nombre:</label>
+                            <input type="text" class="valor" id="nombre" required>
+                        </div>
+                        <div class="valores">
+                            <label for="edad" class="etiqueta">Edad:</label>
+                            <input type="number" class="valor" id="edad" required>
+                        </div>
+                        <div class="valores">
+                            <label for="grupo" class="etiqueta">Grupo(A, B, C):</label>
+                            <input type="text" class="valor" id="grupo" required>
+                        </div>
+                        <div class="valores">
+                            <label for="materiasInscritos" class="form-label">Materias Inscrito:</label>
+                            <input type="text" class="etiquetaMaterias" id="materia1">
+                            <input type="text" class="etiquetaMaterias" id="materia2">
+                            <input type="text" class="etiquetaMaterias" id="materia3">
+                            <input type="text" class="etiquetaMaterias" id="materia4">
+                        </div>
+                        <button type="submit" class="botonAgregar" id="agregar">Agregar</button>
+                    </form>
+                </div>
+
+                <div id="buscador">
+                    <input type="text" id="busqueda" placeholder="Buscar por nombre, apellido o grupo">
+                    <button id="buscar">Buscar</button>
+                </div>
+
+                <div id="listaAlumnos">
+                    <h2>Lista de Alumnos</h2>
+                    <ul id="listita" class="listado">
+                    </ul>
+                </div>
+                
+            </div>
+        </main>
+        <aside>
+            <button type="button" class="botonRecargar" id="recargar">Recargar</button>
+            <div id="listaAlumnosAside">
+                <h2>Lista de Alumnos</h2>
+                <ul id="listota" class="listado">
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <script src="/JS/index.js"></script>
+</body>
